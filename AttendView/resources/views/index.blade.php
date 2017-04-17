@@ -25,7 +25,11 @@
                     <tr>
                         <td>{{$d['studentId']}}</td>
                         <td>{{$d['in']}}</td>
-                        <td>{{$d['out']}}</td>
+                        @if($d['out'] === '0000-00-00 00:00:00')
+                            <td>データなし</td>
+                        @else
+                            <td>{{$d['out']}}</td>
+                        @endif
                     </tr>
                 @endforeach
             </table>
