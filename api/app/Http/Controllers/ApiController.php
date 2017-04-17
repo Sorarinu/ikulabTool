@@ -10,13 +10,13 @@ class ApiController extends Controller
 {
     public function add(Request $request)
     {
-        //$sid = $request->input('studentId');
-        //$time = $request->input('time');
+        $sid = $request->input('studentId');
+        $time = $request->input('time');
 
-        $sid = $request->get('studentId');
-        $time = $request->get('time');
+        //$sid = $request->get('studentId');
+        //$time = $request->get('time');
 
-        Log::debug('sid: ' . $sid);
+        Log::debug('sid: ' . $studentId);
         Log::debug('time: ' . $time);
 
         return response()->json(['status' => '200']);
