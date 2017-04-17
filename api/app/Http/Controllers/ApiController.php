@@ -21,11 +21,11 @@ class ApiController extends Controller
         $tmp = $dbConn->checkExistsAndStatus($sid);
         Log::debug($tmp);
 
-        /*if ($tmp === null) {
+        if ($tmp === null) {
             $dbConn->insertEnterData($sid, $time);
         } else {
-            $dbConn->updateExitData($tmp[])
-        }*/
+            //$dbConn->updateExitData($tmp);
+        }
 
         return response()->json(['status' => '200', 'studentId' => $sid, 'time' => $time]);
     }
