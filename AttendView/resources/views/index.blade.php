@@ -2,10 +2,13 @@
 <head>
     <meta charset="utf-8">
     <title>
-        @yield('title')
+        生野研Viewer
     </title>
-    <link rel="stylesheet" href="{{asset("bower_components/AdminLTE/bootstrap/css/bootstrap.min.css")}}">
-    <script src="{{asset("bower_components/AdminLTE/bootstrap/js/bootstrap.min.js")}}" type="text/javascript"></script>
+    <link href="{{ elixir('css/app.css') }}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </head>
 
 <body>
