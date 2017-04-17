@@ -19,7 +19,7 @@ class ApiController extends Controller
         Log::debug('time: ' . $time);
 
         $tmp = $dbConn->checkExistsAndStatus($sid);
-        Log::debug($tmp);
+        Log::debug(json_encode($tmp));
 
         if ($tmp === null) {
             $dbConn->insertEnterData($sid, $time);
