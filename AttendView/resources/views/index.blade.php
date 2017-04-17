@@ -20,6 +20,14 @@
                     <th>入校時間</th>
                     <th>退校時間</th>
                 </tr>
+
+                @foreach($timedata as $d)
+                    <tr>
+                        <td>{{$d['studentId']}}</td>
+                        <td>{{$d['in']}}</td>
+                        <td>{{$id['out']}}</td>
+                    </tr>
+                @endforeach
             </table>
         </div>
     </div>

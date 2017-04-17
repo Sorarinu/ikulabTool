@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="18db85af-5b11-4014-a31f-eb76414d2cc9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AttendView/app/Http/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/AttendView/app/Http/Controllers/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AttendView/resources/views/index.blade.php" afterPath="$PROJECT_DIR$/AttendView/resources/views/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,14 +27,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AttendView/app/Http/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-              <folding>
-                <element signature="e#40#69#0#PHP" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Timedata.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AttendView/app/Timedata.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,21 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AttendView/resources/views/welcome.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AttendView/resources/views/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="405">
+              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -138,10 +136,10 @@
         <option value="$PROJECT_DIR$/api/app/Http/Controllers/ApiController.php" />
         <option value="$PROJECT_DIR$/AttendView/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/AttendView/resources/assets/sass/app.scss" />
-        <option value="$PROJECT_DIR$/AttendView/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/AttendView/gulpfile.js" />
         <option value="$PROJECT_DIR$/AttendView/app/Library/DbConnection.php" />
         <option value="$PROJECT_DIR$/AttendView/app/Http/Controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/AttendView/resources/views/index.blade.php" />
       </list>
     </option>
   </component>
@@ -557,12 +555,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1492415224256</updated>
-      <workItem from="1492415225914" duration="7001000" />
+      <workItem from="1492415225914" duration="7180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7001000" />
+    <option name="totallyTimeSpent" value="7180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2560" y="0" width="2560" height="1440" extended-state="0" />
@@ -622,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AttendView/app/Timedata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -669,14 +659,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AttendView/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,13 +706,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AttendView/app/Timedata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AttendView/app/Http/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#69#0#PHP" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AttendView/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
