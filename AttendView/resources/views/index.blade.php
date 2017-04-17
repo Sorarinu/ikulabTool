@@ -17,11 +17,6 @@
                     <th>入校時間</th>
                     <th>退校時間</th>
                 </tr>
-                @foreach ($data as $d)
-                    <tr>
-                        <td></td>
-                    </tr>
-                @endforeach
             </table>
         </div>
     </div>
