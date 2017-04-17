@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use app\Library\DbConnection;
+use App\Library\DbConnection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
