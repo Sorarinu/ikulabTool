@@ -15,11 +15,7 @@ class ApiController extends Controller
         $sid = $request->input('studentId');
         $time = $request->input('time');
 
-        Log::debug('sid: ' . $sid);
-        Log::debug('time: ' . $time);
-
         $tmp = json_decode(json_encode($dbConn->checkExistsAndStatus($sid)), true);
-        Log::debug($tmp);
 
         if ($tmp === null) {
             $dbConn->insertEnterData($sid, $time);
