@@ -25,7 +25,7 @@
                     <tr>
                         <td>{{$d['studentId']}}</td>
                         <td>{{$d['in']}}</td>
-                        <td>{{$id['out']}}</td>
+                        <td>{{$d['out']}}</td>
                     </tr>
                 @endforeach
             </table>

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Log;
 
 class IndexController extends Controller
 {
@@ -18,6 +19,8 @@ class IndexController extends Controller
     public function index()
     {
         $dbConn = new DbConnection();
-        return view('index', ['timedata' => $dbConn->getData()]);
+        $timedata = $dbConn->getData();
+        Log::debug(json_encode($timedata));
+        return view('index', ['timedata' => $timedata]);
     }
 }
