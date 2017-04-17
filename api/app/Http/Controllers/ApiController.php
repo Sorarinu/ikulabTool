@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use app\Library\DbConnection;
+use App\Library\DbConnection;
 use Log;
 use Illuminate\Http\Request;
 
