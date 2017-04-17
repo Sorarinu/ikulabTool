@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use app\Library\DbConnection;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,6 +17,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $dbConn = new DbConnection();
+        return view('index', ['timedata' => $dbConn->getData()]);
     }
 }
