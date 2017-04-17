@@ -16,7 +16,7 @@ class ApiController extends Controller
         $sid = $request->get('studentId');
         $time = $request->get('time');
 
-        Log::debug('sid: ' . $);
+        Log::debug('sid: ' . $sid);
         Log::debug('time: ' . $time);
 
         return response()->json(['status' => '200']);
