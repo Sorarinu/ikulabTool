@@ -14,7 +14,7 @@
 <body>
     <div class="col-md-12">
         <div class="table-responsive">
-            <table class="table table-hover">
+            <table class="table table-hover" border="1">
                 <tr>
                     <th>学籍番号</th>
                     <th>入校時間</th>
