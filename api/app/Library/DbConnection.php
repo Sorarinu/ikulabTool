@@ -9,6 +9,7 @@
 
 namespace app\Library;
 
+use App\Timedata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Log;
@@ -17,23 +18,53 @@ class DbConnection
 {
     private $request;
 
-    public function __construct(Request $request)
+    public function __construct()
     {
-        $this->request = $request;
     }
 
     /**
      * @param $sid 学籍番号
-     * @return bool
+     * @return null
      */
-    public function checkExists($sid)
+    public function checkExistsAndStatus($sid)
     {
-        $result = DB::table('timedata')->select('studentId')->where('studentId', '=', $sid)->where('status', '<>', 1)->get();
+        $result = DB::table('timedata')->select('id')->where('studentId', '=', $sid)->where('status', '=', 0)->get();
 
         if (isset($result[0])) {
-            return true;
+            return $result[0];
         } else {
-            return false;
+            return null;
+        }
+    }
+
+    public function insertEnterData($sid, $time)
+    {
+        try {
+            $data = [
+                'studentId' => $sid,
+                'in' => $time,
+                'status' => 0,
+            ];
+
+            DB::table('timedata')->insert($data);
+
+            return response()->json(['status' => 200]);
+        } catch (\Exception $e) {
+            return response()->json(['status' => $e->getCode(), 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function updateExitData($id, $time)
+    {
+        try {
+            $timedata = Timedata::find($id);
+            $timedata->out = $time;
+            $timedata->status = 1;
+            $timedata->save();
+
+            return response()->json(['status' => 200]);
+        } catch (\Exception $e) {
+            return response()->json(['status' => $e->getCode(), 'message' => $e->getMessage()]);
         }
     }
 }
