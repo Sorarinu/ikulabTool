@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('add/{studentId}/{time}', ['uses' => 'ApiController@add']);
+Route::get('/add', ['uses' => 'ApiController@add']);
