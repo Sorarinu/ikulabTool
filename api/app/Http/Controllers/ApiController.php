@@ -24,7 +24,7 @@ class ApiController extends Controller
         if ($tmp === null) {
             $dbConn->insertEnterData($sid, $time);
         } else {
-            //$dbConn->updateExitData($tmp);
+            $dbConn->updateExitData($tmp['id'], $time);
         }
 
         return response()->json(['status' => '200', 'studentId' => $sid, 'time' => $time]);
