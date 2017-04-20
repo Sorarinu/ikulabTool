@@ -12,7 +12,7 @@
 
 <body>
     <div class="col-md-12">
-        <form action="/download" method="post">
+        <form action="/ikulab/download" method="post">
             <input type="submit" name="downloadBtn" value="CSVをダウンロード">
         </form>
 
