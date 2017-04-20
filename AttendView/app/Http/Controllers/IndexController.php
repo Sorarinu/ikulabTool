@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use app\Library\CSV;
 use App\Library\DbConnection;
+use App\Timedata;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -22,5 +24,12 @@ class IndexController extends Controller
         $timedata = $dbConn->getData();
         Log::debug(json_encode($timedata));
         return view('index', ['timedata' => $timedata]);
+    }
+
+    public function download()
+    {
+        $users = Timedata::all(['studentId', 'in', 'out']);
+        $csvHeader = ['学籍番号', '入校時間', '退校時間'];
+        return CSV::download($users, $csvHeader, 'attendList.csv');
     }
 }

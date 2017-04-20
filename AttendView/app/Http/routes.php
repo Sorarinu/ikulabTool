@@ -12,3 +12,4 @@
 */
 
 Route::get('/', ['uses' => 'IndexController@index']);
+Route::get('/download', ['uses' => 'IndexController@download']);
