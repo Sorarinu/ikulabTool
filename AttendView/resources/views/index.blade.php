@@ -12,7 +12,8 @@
 
 <body>
     <div class="col-md-12">
-        <form action="/ikulab/download" method="post">
+        <form action="/ikulab/download" method="get">
+            <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
             <input type="submit" name="downloadBtn" value="CSVをダウンロード">
         </form>
 
