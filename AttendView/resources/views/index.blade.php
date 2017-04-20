@@ -8,11 +8,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="col-md-12">
+        <form action="/download" method="post">
+            <input type="submit" name="downloadBtn" value="CSVをダウンロード">
+        </form>
+
         <div class="table-responsive">
             <table class="table table-hover" border="1">
                 <tr>
