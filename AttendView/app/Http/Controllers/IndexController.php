@@ -28,7 +28,7 @@ class IndexController extends Controller
 
     public function download()
     {
-        $users = Timedata::all(['studentId', 'in', 'out']);
+        $users = Timedata::all(['studentId', 'in', 'out'])->toArray();
         $csvHeader = ['学籍番号', '入校時間', '退校時間'];
         return CSV::download($users, $csvHeader, 'attendList.csv');
     }
