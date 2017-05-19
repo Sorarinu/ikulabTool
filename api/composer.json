@@ -6,8 +6,12 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
+<<<<<<< HEAD
         "laravel/framework": "5.1.*",
         "nesbot/carbon": "^1.22"
+=======
+        "laravel/framework": "5.1.*"
+>>>>>>> e31db7aabd914307aebc83fc73d8ce365b085147
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

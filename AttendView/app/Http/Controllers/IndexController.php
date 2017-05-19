@@ -25,7 +25,6 @@ class IndexController extends Controller
         $dbConn = new DbConnection();
         $timedata = $dbConn->getData();
         $graphData = $this->getGraph();
-        //Log::debug(json_encode($timedata));
         return view('index', ['timedata' => $timedata, 'graphData' => $graphData]);
     }
 
