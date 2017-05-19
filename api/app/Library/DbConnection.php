@@ -29,13 +29,14 @@ class DbConnection
      */
     public function checkExistsAndStatus($sid)
     {
-        $result = DB::table('timedata')->select('id', 'studentId', 'in')->where('studentId', '=', $sid)->where('status', '=', 0)->first();
+        $result = DB::table('timedata')->select('id', 'studentId', 'in')->where('studentId', '=', $sid)->where('status', '=', 0)->get();
 
-        if (isset($result)) {
-            $time = new Carbon($result->in);
-
-            if($time->isYesterday()) {
-                $this->updatePastData($result->id);
+        if (isset($result[0])) {
+            $result = (array)$result[0];
+            $time = new Carbon($result['in']);
+            
+            if(!$time->isToday()) {
+                $this->updatePastData($result['id']);
                 return null;
             } else {
                 return $result;
